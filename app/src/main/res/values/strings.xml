@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Practica 1</string>
+    <string name="text_default">N/A</string>
+    <string name="rvtitulo">Collection Movies</string>
+</resources>
