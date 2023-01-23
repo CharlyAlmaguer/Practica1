@@ -21,7 +21,7 @@
             android:fitsSystemWindows="true"
             app:contentScrim="@color/black"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            >
+            app:collapsedTitleTextColor="@color/white">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ivDetailPoster"
