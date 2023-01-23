@@ -21,7 +21,8 @@
             android:fitsSystemWindows="true"
             app:contentScrim="@color/black"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:collapsedTitleTextColor="@color/white">
+            app:collapsedTitleTextColor="@color/white"
+            app:expandedTitleTextColor="@color/white">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ivDetailPoster"
@@ -41,8 +42,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                />
+                app:layout_collapseMode="pin"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
