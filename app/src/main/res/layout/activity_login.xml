@@ -74,7 +74,7 @@
         android:layout_marginStart="35dp"
         android:textColor="@color/black"
         android:textSize="12sp"
-        android:text="*La contraseña debe de tener minimo 6 caracteres y debe contener al menos una letra y al menos un numero"
+        android:text="@string/req_constraseña"
         android:layout_below="@+id/tilContrasenia"/>
 
     <com.google.android.material.button.MaterialButton
@@ -114,7 +114,7 @@
         android:layout_marginBottom="40dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:text="¿Olvidó su contraseña? Restablecer aquí"
+        android:text="@string/res_contraseña"
         android:textAlignment="center"
         android:textColor="#0E66CC"
         android:textSize="16sp" />
