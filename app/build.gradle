@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -37,6 +38,7 @@ android {
 
 dependencies {
 
+    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
     def retrofitVersion = '2.9.0'
     def glideVersion = '4.14.2'
 
@@ -54,4 +56,7 @@ dependencies {
 
     //https://github.com/vinc3m1/RoundedImageView
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //Google Maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
 }

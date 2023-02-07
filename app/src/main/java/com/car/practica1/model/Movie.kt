@@ -12,5 +12,9 @@ data class Movie(
     @SerializedName("clasificacion")
     val clasificacion: String,
     @SerializedName("duracion")
-    val duracion: String
+    val duracion: String,
+    @SerializedName("lat")
+    val lat: Double,
+    @SerializedName("lon")
+    val lon: Double
 )

@@ -67,7 +67,12 @@ class MainActivity : AppCompatActivity() {
 
         val parametros = Bundle().apply {
             putString("id", movie.id)
+            putDouble("lat",movie.lat)
+            putDouble("lon",movie.lon)
         }
+
+        print(movie.lat)
+        print(movie.lon)
 
         val intent = Intent(this,DetailActivity::class.java).apply {
             putExtras(parametros)

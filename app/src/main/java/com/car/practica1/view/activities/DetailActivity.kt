@@ -1,6 +1,7 @@
 package com.car.practica1.view.activities
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -31,6 +32,9 @@ class DetailActivity : AppCompatActivity() {
 
         val id = bundle?.getString("id","0")
 
+        val lat = bundle!!.getDouble("lat",0.0)
+        val lon = bundle!!.getDouble("lon",0.0)
+
         CoroutineScope(Dispatchers.IO).launch {
 
             val call = Constants.getRetrofit().create(MoviesApi::class.java).getMovieDetail(id)
@@ -57,6 +61,7 @@ class DetailActivity : AppCompatActivity() {
                         pbConexion.visibility = View.INVISIBLE
                     }
 
+
                 }
 
                 override fun onFailure(call: Call<MovieDetail>, t: Throwable) {
@@ -74,6 +79,32 @@ class DetailActivity : AppCompatActivity() {
 
             })
 
+        }
+
+        binding.ivPin.setOnClickListener {
+            val parametros = Bundle().apply {
+                putDouble("lat", lat)
+                putDouble("lon",lon)
+            }
+
+            val intent = Intent(this,LocationActivity::class.java).apply {
+                putExtras(parametros)
+            }
+
+            startActivity(intent)
+        }
+
+        binding.tvPin.setOnClickListener {
+            val parametros = Bundle().apply {
+                putDouble("lat", lat)
+                putDouble("lon",lon)
+            }
+
+            val intent = Intent(this,LocationActivity::class.java).apply {
+                putExtras(parametros)
+            }
+
+            startActivity(intent)
         }
 
     }

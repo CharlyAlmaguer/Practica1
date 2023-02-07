@@ -7,6 +7,32 @@
     android:background="@color/background_movies"
     tools:context=".view.activities.MainActivity">
 
+        <ImageView
+            android:id="@+id/ivIconRv"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/cine"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ivIconRv"
+        android:text="Collection Movies"
+        android:textColor="@color/white"
+        android:layout_marginStart="5dp"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivIconRv"/>
+
     <ProgressBar
         android:id="@+id/pbConexion"
         style="?attr/progressBarStyle"
@@ -14,31 +40,5 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
-
-    <ImageView
-        android:id="@+id/ivIconRv"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:src="@drawable/cine"/>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/ivIconRv"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        app:title="@string/rvtitulo"
-        app:titleTextColor="@color/white"
-        app:layout_collapseMode="pin"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"/>
 
 </RelativeLayout>
